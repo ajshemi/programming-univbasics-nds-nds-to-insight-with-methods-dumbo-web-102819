@@ -25,8 +25,7 @@ end
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
 def gross_for_director(director_data)
-  nds.map do |obj|
-    obj[:name]
+
     sum=0
     obj[:movies].map do |value|
       value[:worldwide_gross]
