@@ -8,16 +8,9 @@ require 'directors_database'
 def directors_totals(nds)
   result={}
   nds.map do |obj|
-    obj[:name]
-    #obj[:movies]
-    sum=0
-    obj[:movies].map do |value|
-      value[:worldwide_gross]
-      sum+=value[:worldwide_gross]
-    end
+    sum=gross_for_director(obj)
     result[obj[:name]]=sum
   end
-
   result
   #nil
 end
